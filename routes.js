@@ -3,6 +3,7 @@ import * as TikTokTrendsController from './controllers/TikTokTrendsController.js
 import * as TikTokCommentsController from './controllers/TikTokCommentsController.js';
 import * as SegmentsController from './controllers/SegmentsController.js';
 import * as TwitterController from "./controllers/TwitterController.js"
+import * as SpotifyController from "./controllers/SpotifyController.js"
 
 const routes = new Router();
 
@@ -21,5 +22,10 @@ routes.post('/get_segments_icons' , SegmentsController.get_segments_icons) ;
 
 routes.get('/get_twitter_profile' , TwitterController.getProfile) ;
 routes.get('/get_tweets' , TwitterController.getAllTweets) ;
+
+routes.get('/get_spotify_profile' , SpotifyController.getProfile) ;
+routes.get('/get_artist_albums' , SpotifyController.getArtistAlbums) ;
+routes.get('/get_artist_tracks' , SpotifyController.getArtistTracks) ;
+
 
 export default routes;
